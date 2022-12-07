@@ -174,8 +174,8 @@ The "<|en|>" token is used to specify that the speech is in english and should b
 >>> import torch
 
 >>> # load model and processor
->>> processor = WhisperProcessor.from_pretrained("openai/whisper-large")
->>> model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-large")
+>>> processor = WhisperProcessor.from_pretrained("openai/whisper-large-v2")
+>>> model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-large-v2")
 
 >>> # load dummy dataset and read soundfiles
 >>> ds = load_dataset("hf-internal-testing/librispeech_asr_dummy", "clean", split="validation")
@@ -199,8 +199,8 @@ transcription.
 >>> import torch
 
 >>> # load model and processor
->>> processor = WhisperProcessor.from_pretrained("openai/whisper-large")
->>> model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-large")
+>>> processor = WhisperProcessor.from_pretrained("openai/whisper-large-v2")
+>>> model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-large-v2")
 
 >>> # load dummy dataset and read soundfiles
 >>> ds = load_dataset("common_voice", "fr", split="test", streaming=True)
@@ -227,8 +227,8 @@ The "<|translate|>" is used as the first decoder input token to specify the tran
 >>> import torch
 
 >>> # load model and processor
->>> processor = WhisperProcessor.from_pretrained("openai/whisper-large")
->>> model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-large")
+>>> processor = WhisperProcessor.from_pretrained("openai/whisper-large-v2")
+>>> model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-large-v2")
 
 >>> # load dummy dataset and read soundfiles
 >>> ds = load_dataset("common_voice", "fr", split="test", streaming=True)
@@ -245,7 +245,7 @@ The "<|translate|>" is used as the first decoder input token to specify the tran
 
 ## Evaluation
 
-This code snippet shows how to evaluate **openai/whisper-large** on LibriSpeech's "clean" and "other" test data.
+This code snippet shows how to evaluate **openai/whisper-large-v2** on LibriSpeech's "clean" and "other" test data.
  
 ```python
 >>> from datasets import load_dataset
@@ -257,8 +257,8 @@ This code snippet shows how to evaluate **openai/whisper-large** on LibriSpeech'
 
 >>> librispeech_eval = load_dataset("librispeech_asr", "clean", split="test")
 
->>> model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-large").to("cuda")
->>> processor = WhisperProcessor.from_pretrained("openai/whisper-large")
+>>> model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-large-v2").to("cuda")
+>>> processor = WhisperProcessor.from_pretrained("openai/whisper-large-v2")
 
 >>> def map_to_pred(batch):
 >>>     input_features = processor(batch["audio"]["array"], return_tensors="pt").input_features
