@@ -217,7 +217,7 @@ transcription.
 ```
 
 ## Translation 
-The "<|translate|>" is used as the first decoder input token to specify the transcription task. 
+The `"<|translate|>"` token is used as the first decoder input token to specify the translation task. 
 
 ### French to English
 
