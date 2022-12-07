@@ -8,11 +8,11 @@
   "attention_dropout": 0.0,
   "begin_suppress_tokens": [
     220,
-    50256
+    50257
   ],
   "bos_token_id": 50257,
   "d_model": 1280,
-  "decoder_attention_heads": 1280,
+  "decoder_attention_heads": 20,
   "decoder_ffn_dim": 5120,
   "decoder_layerdrop": 0.0,
   "decoder_layers": 32,
@@ -44,7 +44,7 @@
   "model_type": "whisper",
   "num_hidden_layers": 32,
   "num_mel_bins": 80,
-  "pad_token_id": 50256,
+  "pad_token_id": 50257,
   "scale_embedding": false,
     "suppress_tokens": [
     1,
