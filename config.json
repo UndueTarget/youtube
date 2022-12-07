@@ -1,5 +1,5 @@
 {
-  "_name_or_path": "/home/arthur_huggingface_co/transformers/Arthur/whisper-large-v2",
+  "_name_or_path": "openai/whisper-large-v2",
   "activation_dropout": 0.0,
   "activation_function": "gelu",
   "architectures": [
@@ -22,23 +22,20 @@
   "encoder_ffn_dim": 5120,
   "encoder_layerdrop": 0.0,
   "encoder_layers": 32,
-  "eos_token_id": 50256,
+  "eos_token_id": 50257,
   "forced_decoder_ids": [
     [
       1,
-      50259
+      50358
     ],
     [
       2,
-      50359
-    ],
-    [
-      3,
       50363
     ]
   ],
   "init_std": 0.02,
   "is_encoder_decoder": true,
+  "max_length": 448,
   "max_source_positions": 1500,
   "max_target_positions": 448,
   "model_type": "whisper",
@@ -46,7 +43,7 @@
   "num_mel_bins": 80,
   "pad_token_id": 50257,
   "scale_embedding": false,
-    "suppress_tokens": [
+  "suppress_tokens": [
     1,
     2,
     7,
